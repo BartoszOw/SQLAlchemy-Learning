@@ -55,3 +55,7 @@ with open('clean_measure.csv') as f:
         [{'station': row['station'], 'date': row['date'],'precip': row['precip'],
            'tobs': row['tobs']} for row in reader]
     )
+
+
+res = conn.execute("SELECT * FROM stations LIMIT 5").fetchall()
+print(res)
